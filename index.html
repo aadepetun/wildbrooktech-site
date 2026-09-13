@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Wildbrook Company — simulation automation and software</title>
+<meta name="description" content="The Wildbrook Company builds software that automates signal integrity and power integrity simulation, and develops ClariPage, a study tool for students.">
+<style>
+  :root{
+    --ink:#16202B; --body:#3C4956; --muted:#6E7C89;
+    --rule:#DDE4EA; --paper:#FFFFFF; --wash:#F4F7F9;
+    --signal:#0B6E8C; --leaf:#2C5F3F;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--body);
+    font-family:"IBM Plex Sans","Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:17px; line-height:1.65; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:840px; margin:0 auto; padding:0 28px}
+  a{color:var(--signal)}
+  a:focus-visible{outline:2px solid var(--signal); outline-offset:3px; border-radius:2px}
+
+  header{padding:34px 0 0}
+  .mark{font-size:17px; font-weight:600; color:var(--ink); letter-spacing:-.1px}
+  .mark span{color:var(--signal)}
+
+  .hero{padding:60px 0 52px; border-bottom:1px solid var(--rule)}
+  h1{
+    margin:0 0 22px; color:var(--ink); font-weight:600;
+    font-size:clamp(30px,5vw,44px); line-height:1.18; letter-spacing:-.6px;
+    max-width:17ch;
+  }
+  .lede{margin:0; max-width:62ch; font-size:19px; color:var(--body)}
+  .scope{margin-top:34px}
+  .scope svg{display:block; width:100%; height:auto; max-width:420px}
+  .scope figcaption{margin-top:10px; font-size:14px; color:var(--muted)}
+
+  section{padding:52px 0; border-bottom:1px solid var(--rule)}
+  h2{margin:0 0 16px; color:var(--ink); font-size:23px; font-weight:600; letter-spacing:-.2px}
+  section p{margin:0 0 16px; max-width:64ch}
+  section p:last-child{margin-bottom:0}
+  .tag{
+    display:inline-block; margin-bottom:14px; padding:4px 11px; border-radius:100px;
+    font-size:13px; font-weight:500; background:var(--wash); color:var(--muted);
+  }
+  .tag.product{background:#EDF3EF; color:var(--leaf)}
+
+  .contact dl{margin:0; display:grid; grid-template-columns:132px 1fr; gap:12px 24px}
+  .contact dt{color:var(--muted); font-size:15px}
+  .contact dd{margin:0; color:var(--ink)}
+  .contact address{font-style:normal; line-height:1.6}
+
+  footer{padding:30px 0 60px; color:var(--muted); font-size:14px}
+
+  @media (max-width:560px){
+    .contact dl{grid-template-columns:1fr; gap:2px 0}
+    .contact dd{margin-bottom:14px}
+  }
+</style>
+</head>
+<body>
+
+<header class="wrap">
+  <div class="mark">The Wildbrook <span>Company</span></div>
+</header>
+
+<main>
+  <div class="wrap">
+    <div class="hero">
+      <h1>Software that does the tedious half of engineering work.</h1>
+      <p class="lede">Wildbrook is a software company in Cedar Park, Texas. We build tools that take slow, repetitive technical work and run it automatically &mdash; in hardware simulation, and in how students study.</p>
+
+      <figure class="scope">
+        <svg viewBox="0 0 400 200" role="img" aria-label="An eye diagram, the standard way signal integrity engineers visualise a high-speed digital signal.">
+          <line x1="40" y1="100" x2="360" y2="100" stroke="#DDE4EA" stroke-width="1"/>
+          <g fill="none" stroke="#0B6E8C" stroke-width="1" opacity="0.22">
+            <path d="M34,100 C74,100 74,54 124,54 L264,54 C314,54 314,100 354,100"/>
+            <path d="M46,100 C86,100 86,46 136,46 L276,46 C326,46 326,100 366,100"/>
+            <path d="M34,100 C74,100 74,146 124,146 L264,146 C314,146 314,100 354,100"/>
+            <path d="M46,100 C86,100 86,154 136,154 L276,154 C326,154 326,100 366,100"/>
+          </g>
+          <g fill="none" stroke="#0B6E8C" stroke-width="1.8">
+            <path d="M40,100 C80,100 80,50 130,50 L270,50 C320,50 320,100 360,100"/>
+            <path d="M40,100 C80,100 80,150 130,150 L270,150 C320,150 320,100 360,100"/>
+          </g>
+        </svg>
+        <figcaption>An eye diagram &mdash; how engineers read whether a high-speed signal survives its journey across a board.</figcaption>
+      </figure>
+    </div>
+
+    <section>
+      <span class="tag">Simulation automation</span>
+      <h2>Signal and power integrity, without the setup</h2>
+      <p>Signal integrity and power integrity simulation is how hardware teams find out whether a design will actually work before anyone builds it. The analysis is valuable. The work of setting it up &mdash; assembling stackups, configuring solvers, sweeping parameters, collecting results &mdash; is slow, manual, and easy to get subtly wrong.</p>
+      <p>Wildbrook builds software that automates that setup and the reporting around it, so engineers spend their time interpreting results rather than producing them.</p>
+    </section>
+
+    <section>
+      <span class="tag product">ClariPage</span>
+      <h2>Turning handwritten notes into study material</h2>
+      <p>ClariPage is our app for students. Photograph a page of handwritten class notes and it produces organized study notes, explanatory diagrams, and flashcards &mdash; with every point traceable back to the page it came from.</p>
+      <p>It is built for families, with the parent as the account holder. Photographs are processed and discarded rather than stored. Our <a href="/claripage-privacy">privacy policy</a> sets out exactly what is collected and what is not.</p>
+      <p>ClariPage is in testing and not yet publicly available.</p>
+    </section>
+
+    <section class="contact">
+      <h2>Contact</h2>
+      <dl>
+        <dt>Address</dt>
+        <dd><address>The Wildbrook Company LLC<br>202 Walton Way, Ste 192 PMB 459<br>Cedar Park, TX 78613<br>United States</address></dd>
+        <dt>Phone</dt>
+        <dd><a href="tel:+12109200417">(210) 920-0417</a></dd>
+        <dt>Email</dt>
+        <dd><a href="mailto:contact@wildbrooktech.com">contact@wildbrooktech.com</a></dd>
+        <dt>Business hours</dt>
+        <dd>Monday to Friday, 9:00 AM &ndash; 5:00 PM Central Time</dd>
+      </dl>
+    </section>
+  </div>
+</main>
+
+<footer class="wrap">
+  &copy; 2026 The Wildbrook Company LLC &middot; <a href="/claripage-privacy">ClariPage privacy policy</a>
+</footer>
+
+</body>
+</html>

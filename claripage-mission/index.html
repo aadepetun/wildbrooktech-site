@@ -1,1 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Why we built ClariPage — The Wildbrook Company</title>
+<meta name="description" content="Why a study tool should show where every point came from.">
+<style>
+  :root{
+    --ink:#16202B; --body:#3C4956; --muted:#6E7C89;
+    --rule:#DDE4EA; --paper:#FFFFFF; --wash:#F4F7F9;
+    --signal:#0B6E8C; --leaf:#2C5F3F; --clay:#C1654A;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--body);
+    font-family:"IBM Plex Sans","Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:17px; line-height:1.68; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:0 28px}
+  a{color:var(--signal)}
+  a:focus-visible{outline:2px solid var(--signal); outline-offset:3px; border-radius:2px}
+
+  header{padding:34px 0 0; font-size:15px}
+  header a{color:var(--muted); text-decoration:none}
+  header a:hover{color:var(--signal)}
+
+  .title{padding:44px 0 30px; border-bottom:1px solid var(--rule)}
+  .logo{font-size:25px; font-weight:600; color:var(--ink); letter-spacing:-.3px}
+  .logo em{font-style:normal; color:var(--clay)}
+  .tagline{margin-top:5px; font-size:12px; letter-spacing:2.4px; color:var(--muted)}
+  h1{margin:26px 0 14px; color:var(--ink); font-size:33px; font-weight:600;
+     letter-spacing:-.5px; line-height:1.22}
+  .dates{margin:0; font-size:15px; color:var(--muted)}
+  .lede{margin:0; font-size:19px; color:var(--body); max-width:60ch}
+
+  nav.pages{margin-top:22px; display:flex; flex-wrap:wrap; gap:18px; font-size:15px}
+  nav.pages a{color:var(--muted); text-decoration:none}
+  nav.pages a:hover{color:var(--signal)}
+  nav.pages a.on{color:var(--ink); font-weight:600}
+
+  main{padding:34px 0 0}
+  h2{margin:42px 0 14px; color:var(--ink); font-size:21px; font-weight:600; letter-spacing:-.2px}
+  h3{margin:28px 0 10px; color:var(--ink); font-size:17.5px; font-weight:600}
+  p{margin:0 0 15px}
+  p strong{color:var(--ink)}
+  ul{margin:0 0 16px; padding-left:22px}
+  li{margin-bottom:8px}
+
+  table{border-collapse:collapse; width:100%; margin:20px 0 18px; font-size:15.5px}
+  th,td{text-align:left; padding:11px 14px; border-bottom:1px solid var(--rule); vertical-align:top}
+  th{background:var(--wash); color:var(--ink); font-weight:600; border-bottom:1px solid #CFD9E1}
+
+  .note{
+    margin:22px 0; padding:18px 22px; background:#EDF3EF;
+    border-left:3px solid var(--leaf); border-radius:0 4px 4px 0;
+  }
+  .note p:last-child{margin-bottom:0}
+
+  .steps{margin:0; padding:0; list-style:none; counter-reset:step}
+  .steps > li{
+    position:relative; margin:0 0 34px; padding-left:52px; counter-increment:step;
+  }
+  .steps > li::before{
+    content:counter(step); position:absolute; left:0; top:1px;
+    width:32px; height:32px; border-radius:100px; background:var(--wash);
+    color:var(--ink); font-weight:600; font-size:15px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .steps h2{margin:0 0 10px; font-size:19px}
+  .steps p:last-child{margin-bottom:0}
+
+  .badges{border-collapse:collapse; width:100%; margin:18px 0}
+  .badges td{border-bottom:1px solid var(--rule); padding:12px 14px 12px 0; vertical-align:top}
+  .badges td:first-child{width:180px; white-space:nowrap}
+  .chip{
+    display:inline-block; padding:3px 10px; border-radius:100px;
+    font-size:12.5px; font-weight:600; letter-spacing:.2px;
+  }
+  .chip.n{background:#EDF3EF; color:var(--leaf)}
+  .chip.p{background:var(--wash); color:var(--muted)}
+  .chip.a{background:#FBF1D8; color:#8A6B12}
+  .chip.f{background:#FBE7E0; color:var(--clay)}
+  .chip.k{background:#E6EFF5; color:var(--signal)}
+
+  .cta{margin:40px 0 0; padding:22px 24px; background:var(--wash); border-radius:6px}
+  .cta p:last-child{margin-bottom:0}
+
+  address{font-style:normal; line-height:1.7}
+  footer{margin-top:50px; padding:26px 0 60px; border-top:1px solid var(--rule);
+         font-size:14px; color:var(--muted)}
+
+  @media (max-width:560px){
+    h1{font-size:27px}
+    .badges td:first-child{width:auto; display:block; padding-bottom:4px}
+    .badges td{display:block; border:0; padding:2px 0}
+    .badges tr{display:block; border-bottom:1px solid var(--rule); padding:12px 0}
+    table:not(.badges),table:not(.badges) tbody,table:not(.badges) tr{display:block}
+    table:not(.badges) thead{display:none}
+    table:not(.badges) tr{border-bottom:1px solid var(--rule); padding:12px 0}
+    table:not(.badges) th,table:not(.badges) td{border:0; padding:2px 0; display:block}
+    table:not(.badges) td:first-child{font-weight:600; color:var(--ink)}
+  }
+</style>
+</head>
+<body>
+
+<header class="wrap"><a href="/">&larr; The Wildbrook Company</a></header>
+
+<div class="wrap">
+  <div class="title">
+    <div class="logo">Clari<em>Page</em></div>
+    <div class="tagline">EVIDENCE FIRST</div>
+    <h1>Why we built it</h1>
+    <p class="lede">Most study apps assume the notes are already good. They usually aren't.</p>
+    <nav class="pages"><a href="/claripage">Overview</a><a href="/claripage-how-it-works">How it works</a><a href="/claripage-mission" class='on'>Why we built it</a><a href="/claripage-privacy">Privacy</a><a href="/claripage-terms">Terms</a></nav>
+  </div>
+
+  <main>
+
+    <h2>The problem isn't studying. It's what's on the page.</h2>
+    <p>Most study apps assume the notes are already good. They take what a student wrote down and turn it into flashcards, quizzes, summaries.</p>
+    <p>But the notes usually aren't good. A child writes fast, misses half of what the teacher said, copies a formula wrong, abbreviates something they won't recognise in a week. Then they revise from that page as though it were complete. They study hard, do badly, and nobody can explain why.</p>
+    <p>A tool that polishes incomplete notes just produces confident, well-formatted gaps.</p>
+
+    <h2>So we show the seams</h2>
+    <p>ClariPage fills in what a page is missing. That part isn't unusual &mdash; plenty of tools will happily generate more.</p>
+    <p>What's unusual is that every point carries a label saying where it came from: what the student wrote, what came off a handout, what was added because the notes left it out, what was corrected because the page had it wrong.</p>
+
+    <h2>Why a label matters more than it sounds</h2>
+    <p><strong>A student can trust it.</strong> When an app hands you a page of confident text, you have no way to know which parts to believe. A labelled page tells you what rests on your teacher's words and what doesn't.</p>
+    <p><strong>A parent can check it.</strong> You can see how much your child captured and how much had to be supplied. That's a real answer to "how is school going", and not one a grade gives you.</p>
+    <p><strong>A teacher isn't undermined.</strong> What was taught stays visibly distinct from what a model added.</p>
+    <p><strong>And it turns a weakness into information.</strong> The practice test reports two scores. A child who does well on their own notes and badly on added material has a note-taking problem, not a studying problem. That's fixable, and invisible on a report card.</p>
+
+    <h2>What we believe</h2>
+    <p><strong>Evidence first.</strong> A study tool should make its sources visible. If we can't show where something came from, we shouldn't be asking a child to memorise it.</p>
+    <p><strong>Better notes, not fewer notes.</strong> The goal is a student who takes better notes next term, not one who stops taking them because an app will do it. So we name what they missed, every time.</p>
+    <p><strong>Studying should never be rationed.</strong> Capturing a page costs us money and is limited. Reviewing, practising and testing cost almost nothing and are not. Charging students for the act of studying gets it backwards.</p>
+    <p><strong>Write for the child in front of you.</strong> Notes for a seven-year-old shouldn't read like notes for a sixteen-year-old. Pick the reading level and everything follows it &mdash; the notes, the flashcards, the questions, even how busy the diagrams are.</p>
+    <p><strong>The adult holds the account.</strong> Children study on a parent's or teacher's login. They don't hand over their details, and the adult can see and delete everything. That was a design decision before it was a legal one.</p>
+    <p><strong>Say what it can't do.</strong> ClariPage reads handwriting well and still sometimes misreads it. It draws diagrams that teach and occasionally draws one that's wrong. We'd rather a student check a diagram than trust it blindly.</p>
+
+    <h2>Who it's for</h2>
+    <p>Families, mostly. A parent who wants to help with revision and hasn't time to rewrite a notebook. A student whose own messy pages should be usable. A teacher turning a handout into practice without losing track of what came from where.</p>
+    <p>It started at one kitchen table, with a pile of science notes that were missing more than they contained.</p>
+
+  </main>
+
+  <footer>&copy; 2026 The Wildbrook Company LLC &middot; <a href="/claripage-privacy">Privacy</a> &middot; <a href="/claripage-terms">Terms</a></footer>
+</div>
+
+</body>
+</html>
 

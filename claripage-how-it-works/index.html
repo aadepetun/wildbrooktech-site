@@ -1,1 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How ClariPage works — The Wildbrook Company</title>
+<meta name="description" content="From a photograph of a messy page to study material you can trust.">
+<style>
+  :root{
+    --ink:#16202B; --body:#3C4956; --muted:#6E7C89;
+    --rule:#DDE4EA; --paper:#FFFFFF; --wash:#F4F7F9;
+    --signal:#0B6E8C; --leaf:#2C5F3F; --clay:#C1654A;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--body);
+    font-family:"IBM Plex Sans","Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:17px; line-height:1.68; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:0 28px}
+  a{color:var(--signal)}
+  a:focus-visible{outline:2px solid var(--signal); outline-offset:3px; border-radius:2px}
+
+  header{padding:34px 0 0; font-size:15px}
+  header a{color:var(--muted); text-decoration:none}
+  header a:hover{color:var(--signal)}
+
+  .title{padding:44px 0 30px; border-bottom:1px solid var(--rule)}
+  .logo{font-size:25px; font-weight:600; color:var(--ink); letter-spacing:-.3px}
+  .logo em{font-style:normal; color:var(--clay)}
+  .tagline{margin-top:5px; font-size:12px; letter-spacing:2.4px; color:var(--muted)}
+  h1{margin:26px 0 14px; color:var(--ink); font-size:33px; font-weight:600;
+     letter-spacing:-.5px; line-height:1.22}
+  .dates{margin:0; font-size:15px; color:var(--muted)}
+  .lede{margin:0; font-size:19px; color:var(--body); max-width:60ch}
+
+  nav.pages{margin-top:22px; display:flex; flex-wrap:wrap; gap:18px; font-size:15px}
+  nav.pages a{color:var(--muted); text-decoration:none}
+  nav.pages a:hover{color:var(--signal)}
+  nav.pages a.on{color:var(--ink); font-weight:600}
+
+  main{padding:34px 0 0}
+  h2{margin:42px 0 14px; color:var(--ink); font-size:21px; font-weight:600; letter-spacing:-.2px}
+  h3{margin:28px 0 10px; color:var(--ink); font-size:17.5px; font-weight:600}
+  p{margin:0 0 15px}
+  p strong{color:var(--ink)}
+  ul{margin:0 0 16px; padding-left:22px}
+  li{margin-bottom:8px}
+
+  table{border-collapse:collapse; width:100%; margin:20px 0 18px; font-size:15.5px}
+  th,td{text-align:left; padding:11px 14px; border-bottom:1px solid var(--rule); vertical-align:top}
+  th{background:var(--wash); color:var(--ink); font-weight:600; border-bottom:1px solid #CFD9E1}
+
+  .note{
+    margin:22px 0; padding:18px 22px; background:#EDF3EF;
+    border-left:3px solid var(--leaf); border-radius:0 4px 4px 0;
+  }
+  .note p:last-child{margin-bottom:0}
+
+  .steps{margin:0; padding:0; list-style:none; counter-reset:step}
+  .steps > li{
+    position:relative; margin:0 0 34px; padding-left:52px; counter-increment:step;
+  }
+  .steps > li::before{
+    content:counter(step); position:absolute; left:0; top:1px;
+    width:32px; height:32px; border-radius:100px; background:var(--wash);
+    color:var(--ink); font-weight:600; font-size:15px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .steps h2{margin:0 0 10px; font-size:19px}
+  .steps p:last-child{margin-bottom:0}
+
+  .badges{border-collapse:collapse; width:100%; margin:18px 0}
+  .badges td{border-bottom:1px solid var(--rule); padding:12px 14px 12px 0; vertical-align:top}
+  .badges td:first-child{width:180px; white-space:nowrap}
+  .chip{
+    display:inline-block; padding:3px 10px; border-radius:100px;
+    font-size:12.5px; font-weight:600; letter-spacing:.2px;
+  }
+  .chip.n{background:#EDF3EF; color:var(--leaf)}
+  .chip.p{background:var(--wash); color:var(--muted)}
+  .chip.a{background:#FBF1D8; color:#8A6B12}
+  .chip.f{background:#FBE7E0; color:var(--clay)}
+  .chip.k{background:#E6EFF5; color:var(--signal)}
+
+  .cta{margin:40px 0 0; padding:22px 24px; background:var(--wash); border-radius:6px}
+  .cta p:last-child{margin-bottom:0}
+
+  address{font-style:normal; line-height:1.7}
+  footer{margin-top:50px; padding:26px 0 60px; border-top:1px solid var(--rule);
+         font-size:14px; color:var(--muted)}
+
+  @media (max-width:560px){
+    h1{font-size:27px}
+    .badges td:first-child{width:auto; display:block; padding-bottom:4px}
+    .badges td{display:block; border:0; padding:2px 0}
+    .badges tr{display:block; border-bottom:1px solid var(--rule); padding:12px 0}
+    table:not(.badges),table:not(.badges) tbody,table:not(.badges) tr{display:block}
+    table:not(.badges) thead{display:none}
+    table:not(.badges) tr{border-bottom:1px solid var(--rule); padding:12px 0}
+    table:not(.badges) th,table:not(.badges) td{border:0; padding:2px 0; display:block}
+    table:not(.badges) td:first-child{font-weight:600; color:var(--ink)}
+  }
+</style>
+</head>
+<body>
+
+<header class="wrap"><a href="/">&larr; The Wildbrook Company</a></header>
+
+<div class="wrap">
+  <div class="title">
+    <div class="logo">Clari<em>Page</em></div>
+    <div class="tagline">EVIDENCE FIRST</div>
+    <h1>How it works</h1>
+    <p class="lede">From a photograph of a messy page to notes, diagrams and recall practice, in about a minute.</p>
+    <nav class="pages"><a href="/claripage">Overview</a><a href="/claripage-how-it-works" class='on'>How it works</a><a href="/claripage-mission">Why we built it</a><a href="/claripage-privacy">Privacy</a><a href="/claripage-terms">Terms</a></nav>
+  </div>
+
+  <main>
+
+    <ol class="steps">
+      <li>
+        <h2>Photograph the pages</h2>
+        <p>The camera stays open between shots, so a whole topic goes in one pass rather than one page at a time. Up to twelve pages in a set. Handwriting or a printed handout both work, and ClariPage can tell the difference.</p>
+        <p>Set the reading level once &mdash; elementary, middle or high &mdash; and it's remembered. Naming the class and topic is optional and sharpens what gets added later.</p>
+      </li>
+      <li>
+        <h2>It reads the pages</h2>
+        <p>Images are sent for processing and discarded. Long sets are read in batches and merged, so a big topic isn't truncated. Spelling is corrected, abbreviations expanded, blank pages ignored.</p>
+        <p>You also get a read-confidence rating. Bad handwriting and bad lighting are real, and you should know when a page was hard to read.</p>
+      </li>
+      <li>
+        <h2>Every point gets a label</h2>
+        <p>This is the part that makes ClariPage different from a summariser. Each line carries its origin: your child's handwriting, a printed handout, an addition, a correction, or your own reference material.</p>
+        <p>Nothing is merged into anonymous prose. The seams stay visible on purpose.</p>
+      </li>
+      <li>
+        <h2>It names the gaps</h2>
+        <p>At the end of every set is a short, plain summary of what the notes left out. Not a scolding &mdash; just an honest note that the page covered the definitions well and skipped the worked examples.</p>
+        <p>Over a term that's the most useful thing in the app. It's the difference between "revise harder" and "you're not writing down the examples".</p>
+      </li>
+      <li>
+        <h2>Diagrams, where they help</h2>
+        <p>Where a section benefits from a figure, ClariPage draws one: a labelled process, a comparison, an equation with its parts named. Where a section wouldn't benefit, it doesn't. A list of definitions doesn't need a picture, and a cluttered page is harder to study from.</p>
+        <p>Diagrams follow the reading level too. A figure for a seven-year-old is bold and simple; one for a sixteen-year-old can carry real detail.</p>
+      </li>
+      <li>
+        <h2>Then you study, as much as you like</h2>
+        <p><strong>Learn</strong> &mdash; adaptive practice. Cards start as multiple choice and switch to typing the answer from memory once you've got them right. Typed answers are marked generously: spelling and word order don't matter, the idea does.</p>
+        <p><strong>Flashcards</strong> &mdash; tap to flip, grade yourself, hear it read aloud.</p>
+        <p><strong>Match</strong> &mdash; a timed pairing game. Good for two minutes in the car.</p>
+        <p><strong>Practice test</strong> &mdash; ten questions, scored instantly, with results split by label so you can see whether lost marks were on your own notes or on material the notes had missed.</p>
+        <p><strong>Review queue</strong> &mdash; everything due today across every set, scheduled so cards return just before they'd be forgotten. Twenty at a time, because a wall of eighty is how people quit.</p>
+      </li>
+      <li>
+        <h2>Your own reference material, optionally</h2>
+        <p>You can add study pages of your own &mdash; a revision guide, formula sheets, pages a teacher shared. ClariPage reads them once and keeps the facts. After that, when a capture touches a topic they cover, it draws on them and labels anything taken from them as <span class="chip k">reference</span>.</p>
+        <p>We keep the facts extracted from your pages, not the images, and never show one family's material to anyone else.</p>
+      </li>
+    </ol>
+
+    <h2>What ClariPage deliberately doesn't do</h2>
+    <p><strong>It doesn't do the homework.</strong> It organizes what was taught and names what's missing. It won't answer the worksheet.</p>
+    <p><strong>It doesn't hide the machine's work.</strong> Every added line is labelled. If you want only what your child wrote, you can see exactly that.</p>
+    <p><strong>It only works on schoolwork.</strong> Pages that aren't study material are declined, and nothing is read or generated from them.</p>
+    <p><strong>It doesn't pretend to be perfect.</strong> Handwriting gets misread. A diagram is occasionally wrong. That's why the confidence rating and the labels are there &mdash; so a student can check rather than assume.</p>
+
+  </main>
+
+  <footer>&copy; 2026 The Wildbrook Company LLC &middot; <a href="/claripage-privacy">Privacy</a> &middot; <a href="/claripage-terms">Terms</a></footer>
+</div>
+
+</body>
+</html>
 

@@ -1,1 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClariPage — The Wildbrook Company</title>
+<meta name="description" content="Study material that shows its working">
+<style>
+  :root{
+    --ink:#16202B; --body:#3C4956; --muted:#6E7C89;
+    --rule:#DDE4EA; --paper:#FFFFFF; --wash:#F4F7F9;
+    --signal:#0B6E8C; --leaf:#2C5F3F; --clay:#C1654A;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--body);
+    font-family:"IBM Plex Sans","Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:17px; line-height:1.68; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:0 28px}
+  a{color:var(--signal)}
+  a:focus-visible{outline:2px solid var(--signal); outline-offset:3px; border-radius:2px}
+
+  header{padding:34px 0 0; font-size:15px}
+  header a{color:var(--muted); text-decoration:none}
+  header a:hover{color:var(--signal)}
+
+  .title{padding:44px 0 30px; border-bottom:1px solid var(--rule)}
+  .logo{font-size:25px; font-weight:600; color:var(--ink); letter-spacing:-.3px}
+  .logo em{font-style:normal; color:var(--clay)}
+  .tagline{margin-top:5px; font-size:12px; letter-spacing:2.4px; color:var(--muted)}
+  h1{margin:26px 0 14px; color:var(--ink); font-size:33px; font-weight:600;
+     letter-spacing:-.5px; line-height:1.22}
+  .dates{margin:0; font-size:15px; color:var(--muted)}
+  .lede{margin:0; font-size:19px; color:var(--body); max-width:60ch}
+
+  nav.pages{margin-top:22px; display:flex; flex-wrap:wrap; gap:18px; font-size:15px}
+  nav.pages a{color:var(--muted); text-decoration:none}
+  nav.pages a:hover{color:var(--signal)}
+  nav.pages a.on{color:var(--ink); font-weight:600}
+
+  main{padding:34px 0 0}
+  h2{margin:42px 0 14px; color:var(--ink); font-size:21px; font-weight:600; letter-spacing:-.2px}
+  h3{margin:28px 0 10px; color:var(--ink); font-size:17.5px; font-weight:600}
+  p{margin:0 0 15px}
+  p strong{color:var(--ink)}
+  ul{margin:0 0 16px; padding-left:22px}
+  li{margin-bottom:8px}
+
+  table{border-collapse:collapse; width:100%; margin:20px 0 18px; font-size:15.5px}
+  th,td{text-align:left; padding:11px 14px; border-bottom:1px solid var(--rule); vertical-align:top}
+  th{background:var(--wash); color:var(--ink); font-weight:600; border-bottom:1px solid #CFD9E1}
+
+  .note{
+    margin:22px 0; padding:18px 22px; background:#EDF3EF;
+    border-left:3px solid var(--leaf); border-radius:0 4px 4px 0;
+  }
+  .note p:last-child{margin-bottom:0}
+
+  .steps{margin:0; padding:0; list-style:none; counter-reset:step}
+  .steps > li{
+    position:relative; margin:0 0 34px; padding-left:52px; counter-increment:step;
+  }
+  .steps > li::before{
+    content:counter(step); position:absolute; left:0; top:1px;
+    width:32px; height:32px; border-radius:100px; background:var(--wash);
+    color:var(--ink); font-weight:600; font-size:15px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .steps h2{margin:0 0 10px; font-size:19px}
+  .steps p:last-child{margin-bottom:0}
+
+  .badges{border-collapse:collapse; width:100%; margin:18px 0}
+  .badges td{border-bottom:1px solid var(--rule); padding:12px 14px 12px 0; vertical-align:top}
+  .badges td:first-child{width:180px; white-space:nowrap}
+  .chip{
+    display:inline-block; padding:3px 10px; border-radius:100px;
+    font-size:12.5px; font-weight:600; letter-spacing:.2px;
+  }
+  .chip.n{background:#EDF3EF; color:var(--leaf)}
+  .chip.p{background:var(--wash); color:var(--muted)}
+  .chip.a{background:#FBF1D8; color:#8A6B12}
+  .chip.f{background:#FBE7E0; color:var(--clay)}
+  .chip.k{background:#E6EFF5; color:var(--signal)}
+
+  .cta{margin:40px 0 0; padding:22px 24px; background:var(--wash); border-radius:6px}
+  .cta p:last-child{margin-bottom:0}
+
+  address{font-style:normal; line-height:1.7}
+  footer{margin-top:50px; padding:26px 0 60px; border-top:1px solid var(--rule);
+         font-size:14px; color:var(--muted)}
+
+  @media (max-width:560px){
+    h1{font-size:27px}
+    .badges td:first-child{width:auto; display:block; padding-bottom:4px}
+    .badges td{display:block; border:0; padding:2px 0}
+    .badges tr{display:block; border-bottom:1px solid var(--rule); padding:12px 0}
+    table:not(.badges),table:not(.badges) tbody,table:not(.badges) tr{display:block}
+    table:not(.badges) thead{display:none}
+    table:not(.badges) tr{border-bottom:1px solid var(--rule); padding:12px 0}
+    table:not(.badges) th,table:not(.badges) td{border:0; padding:2px 0; display:block}
+    table:not(.badges) td:first-child{font-weight:600; color:var(--ink)}
+  }
+</style>
+</head>
+<body>
+
+<header class="wrap"><a href="/">&larr; The Wildbrook Company</a></header>
+
+<div class="wrap">
+  <div class="title">
+    <div class="logo">Clari<em>Page</em></div>
+    <div class="tagline">EVIDENCE FIRST</div>
+    <h1>Study material that shows its working.</h1>
+    <p class="lede">ClariPage turns a photograph of class notes into organized study material &mdash; and labels every point with where it came from.</p>
+    <nav class="pages"><a href="/claripage" class='on'>Overview</a><a href="/claripage-how-it-works">How it works</a><a href="/claripage-mission">Why we built it</a><a href="/claripage-privacy">Privacy</a><a href="/claripage-terms">Terms</a></nav>
+  </div>
+
+  <main>
+
+    <p>A child writes fast. They miss half of what the teacher said, copy a formula wrong, abbreviate something they won't recognise in a week. Then they revise from that page as though it were complete.</p>
+    <p>Most study apps take those notes and make them tidier. ClariPage reads them, fills what's missing, and then shows you exactly which parts came from where.</p>
+
+    <h2>Every point is labelled</h2>
+    <table class="badges">
+      <tr><td><span class="chip n">your notes</span></td><td>What your child actually wrote, tidied up but unchanged in meaning.</td></tr>
+      <tr><td><span class="chip p">from the handout</span></td><td>Text that came off a printed or typed page rather than their handwriting.</td></tr>
+      <tr><td><span class="chip a">added</span></td><td>Not on the page. Filled in because the topic needs it.</td></tr>
+      <tr><td><span class="chip f">fixed</span></td><td>The page said something factually wrong. This is the correction.</td></tr>
+      <tr><td><span class="chip k">reference</span></td><td>Drawn from study material you added to your own library.</td></tr>
+    </table>
+    <p>Nothing is blended together. You can always separate your child's work from the machine's &mdash; which means a student knows what to trust, and a parent can see how much was actually captured in class.</p>
+
+    <h2>It tells you what was missed</h2>
+    <p>Every study set ends with a plain summary of what the notes left out. Take a practice test and you get two scores: how they did on material they wrote down, and how they did on material their notes had missed.</p>
+    <div class="note">
+      <p>A child scoring well on the first and badly on the second doesn't have a studying problem. They have a note-taking problem &mdash; which is fixable, and which a report card will never tell you.</p>
+    </div>
+
+    <h2>What one photograph gives you</h2>
+    <ul>
+      <li>Organized notes written at the right reading level for the child</li>
+      <li>Explanatory diagrams, drawn only where a diagram genuinely helps</li>
+      <li>Flashcards, adaptive practice, a matching game, and a scored practice test</li>
+      <li>A review queue that brings cards back just before they'd be forgotten</li>
+      <li>Read-aloud throughout, which for younger children is the difference between studying alone and needing a grown-up</li>
+    </ul>
+    <p><strong>Studying is never rationed.</strong> Capturing a page has a monthly limit because it costs us money to process. Reviewing, practising and testing don't, and never will. Charging a child for the act of studying gets the product backwards.</p>
+
+    <h2>Built for families</h2>
+    <p>A parent or teacher holds the account. Children study on it and never hand over their own details. There is no advertising, there are no trackers, and nothing about your child is profiled or sold. Photographs are processed and discarded rather than stored.</p>
+
+    <div class="cta">
+      <p><strong>ClariPage is in testing and not yet publicly available.</strong></p>
+      <p>Read <a href="/claripage-how-it-works">how it works</a>, or <a href="/claripage-mission">why we built it</a>.</p>
+    </div>
+
+  </main>
+
+  <footer>&copy; 2026 The Wildbrook Company LLC &middot; <a href="/claripage-privacy">Privacy</a> &middot; <a href="/claripage-terms">Terms</a></footer>
+</div>
+
+</body>
+</html>
 

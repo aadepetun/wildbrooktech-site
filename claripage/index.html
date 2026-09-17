@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ClariPage — The Wildbrook Company</title>
-<meta name="description" content="Study material that shows its working">
+<meta name="description" content="See what your child's notes are missing, before the test does.">
 <style>
   :root{
     --ink:#16202B; --body:#3C4956; --muted:#6E7C89;
@@ -87,6 +87,18 @@
   .cta{margin:40px 0 0; padding:22px 24px; background:var(--wash); border-radius:6px}
   .cta p:last-child{margin-bottom:0}
 
+  .faq h3{
+    margin:32px 0 8px; color:var(--ink); font-size:18px; font-weight:600;
+    letter-spacing:-.1px; line-height:1.4;
+  }
+  .faq h3:first-of-type{margin-top:10px}
+  .faq p{margin:0 0 13px}
+  .faq > section{padding-bottom:6px}
+  .faq > section + section{margin-top:44px; padding-top:34px; border-top:1px solid var(--rule)}
+  .faq h2{margin:0 0 4px}
+  .faq .kicker{font-size:13px; letter-spacing:1.6px; text-transform:uppercase;
+               color:var(--muted); margin:0 0 18px}
+
   address{font-style:normal; line-height:1.7}
   footer{margin-top:50px; padding:26px 0 60px; border-top:1px solid var(--rule);
          font-size:14px; color:var(--muted)}
@@ -112,55 +124,79 @@
   <div class="title">
     <div class="logo">Clari<em>Page</em></div>
     <div class="tagline">EVIDENCE FIRST</div>
-    <h1>Study material that shows its working.</h1>
-    <p class="lede">ClariPage turns a photograph of class notes into organized study material &mdash; and labels every point with where it came from.</p>
-    <nav class="pages"><a href="/claripage" class='on'>Overview</a><a href="/claripage-how-it-works">How it works</a><a href="/claripage-mission">Why we built it</a><a href="/claripage-privacy">Privacy</a><a href="/claripage-terms">Terms</a></nav>
+    <h1>Find out what they missed, before the test does.</h1>
+    <p class="lede">Photograph your child's class notes. ClariPage turns them into study material &mdash; and shows you exactly what the page left out.</p>
+    <nav class="pages"><a href="/claripage" class='on'>Overview</a><a href="/claripage-how-it-works">How it works</a><a href="/claripage-mission">Why we built it</a><a href="/claripage-faq">FAQ</a><a href="/claripage-privacy">Privacy</a><a href="/claripage-terms">Terms</a></nav>
   </div>
 
   <main>
 
-    <p>A child writes fast. They miss half of what the teacher said, copy a formula wrong, abbreviate something they won't recognise in a week. Then they revise from that page as though it were complete.</p>
-    <p>Most study apps take those notes and make them tidier. ClariPage reads them, fills what's missing, and then shows you exactly which parts came from where.</p>
+    <h2>The Tuesday night problem</h2>
+    <p>The test is Thursday. You ask to see their notes.</p>
+    <p>Half a page of handwriting. Three bullet points that trail off mid-sentence. A diagram you can't identify. A formula that might be wrong, and you're not sure enough to correct it.</p>
+    <p>You don't know what the teacher actually said. Your child doesn't remember. So you guess, or you re-teach a topic you last saw twenty-five years ago, or you say "go over it again" and hope.</p>
 
-    <h2>Every point is labelled</h2>
-    <table class="badges">
-      <tr><td><span class="chip n">your notes</span></td><td>What your child actually wrote, tidied up but unchanged in meaning.</td></tr>
-      <tr><td><span class="chip p">from the handout</span></td><td>Text that came off a printed or typed page rather than their handwriting.</td></tr>
-      <tr><td><span class="chip a">added</span></td><td>Not on the page. Filled in because the topic needs it.</td></tr>
-      <tr><td><span class="chip f">fixed</span></td><td>The page said something factually wrong. This is the correction.</td></tr>
-      <tr><td><span class="chip k">reference</span></td><td>Drawn from study material you added to your own library.</td></tr>
-    </table>
-    <p>Nothing is blended together. You can always separate your child's work from the machine's &mdash; which means a student knows what to trust, and a parent can see how much was actually captured in class.</p>
-
-    <h2>It tells you what was missed</h2>
-    <p>Every study set ends with a plain summary of what the notes left out. Take a practice test and you get two scores: how they did on material they wrote down, and how they did on material their notes had missed.</p>
+    <h2>What's actually worrying you</h2>
+    <p>Children don't fall behind in a week. They fall behind one missed concept at a time. Fractions in fourth grade quietly become algebra in eighth.</p>
+    <p>By the time a report card tells you, the gap is months old. And when your child studies hard and still does badly, nobody can tell you why. Was it effort? Understanding? Or notes that were missing the exact thing the test asked about?</p>
     <div class="note">
-      <p>A child scoring well on the first and badly on the second doesn't have a studying problem. They have a note-taking problem &mdash; which is fixable, and which a report card will never tell you.</p>
+      <p>That last one is far more common than parents realise, and it is the only one that never shows up in a grade.</p>
     </div>
 
-    <h2>What one photograph gives you</h2>
-    <ul>
-      <li>Organized notes written at the right reading level for the child</li>
-      <li>Explanatory diagrams, drawn only where a diagram genuinely helps</li>
-      <li>Flashcards, adaptive practice, a matching game, and a scored practice test</li>
-      <li>A review queue that brings cards back just before they'd be forgotten</li>
-      <li>Read-aloud throughout, which for younger children is the difference between studying alone and needing a grown-up</li>
-    </ul>
-    <p><strong>Studying is never rationed.</strong> Capturing a page has a monthly limit because it costs us money to process. Reviewing, practising and testing don't, and never will. Charging a child for the act of studying gets the product backwards.</p>
+    <h2>ClariPage reads the page and shows its working</h2>
+    <p>Photograph your child's notes. You get back organized study notes &mdash; and every single point is labelled with where it came from.</p>
+    <table class="badges">
+      <tr><td><span class="chip n">your notes</span></td><td>What your child actually wrote. Tidied up, meaning unchanged.</td></tr>
+      <tr><td><span class="chip p">from the handout</span></td><td>Text that came off a printed page rather than their handwriting.</td></tr>
+      <tr><td><span class="chip a">added</span></td><td>Not on the page at all. Filled in because the topic needs it.</td></tr>
+      <tr><td><span class="chip f">fixed</span></td><td>The page said something factually wrong. This is the correction.</td></tr>
+      <tr><td><span class="chip k">reference</span></td><td>Drawn from study material you added yourself.</td></tr>
+    </table>
+    <p>Count the yellow. That is how much of Tuesday's lesson never made it onto the page.</p>
+    <p>You didn't have to sit in the classroom, and you didn't have to understand the topic yourself. You can see the shape of what's missing in about ten seconds.</p>
 
-    <h2>Built for families</h2>
-    <p>A parent or teacher holds the account. Children study on it and never hand over their own details. There is no advertising, there are no trackers, and nothing about your child is profiled or sold. Photographs are processed and discarded rather than stored.</p>
+    <h2>Then it tells you which problem you have</h2>
+    <p>Every set of notes ends with a plain summary of what was left out. And after a practice test, ClariPage gives you two scores rather than one: how your child did on material they wrote down, and how they did on material their notes had missed.</p>
+    <p>Those two numbers answer the question you've never been able to answer.</p>
+    <ul>
+      <li>Strong on their own notes, weak on the additions &mdash; they understand the lesson, but they aren't capturing it. That's a note-taking problem, and it's fixable in a fortnight.</li>
+      <li>Weak on both &mdash; the concept didn't land. Now you know to go back to it, and which part.</li>
+      <li>Strong on both &mdash; they're fine. Stop worrying and let them go and play.</li>
+    </ul>
+    <p>This is the thing you cannot get from a grade, from a teacher with twenty-eight other children, or from asking a nine-year-old how school went.</p>
+
+    <h2>It will not do their homework</h2>
+    <p>We think this is why most parents hesitate over an AI study app, and they're right to.</p>
+    <p>ClariPage organizes what was taught and names what's missing. It will not answer the worksheet. Ask it to work on anything that isn't schoolwork and it declines.</p>
+    <p>And because every added line carries a label, you never have to wonder what a machine told your child. You can see it. That's the difference between a study tool and a chatbot your child uses in a closed room.</p>
+
+    <h2>So they can study without you standing over them</h2>
+    <p>Notes are written at your child's reading level &mdash; a seven-year-old's page doesn't read like a fourteen-year-old's. Everything can be read aloud, which for younger children is the difference between working alone and needing an adult beside them.</p>
+    <p>Then there are flashcards, a matching game, typed recall practice, a scored practice test, and a review queue that brings cards back just before they'd be forgotten. A third-grader can work through a round of cards while you make dinner.</p>
+    <p><strong>Studying is never rationed.</strong> Photographing pages has a monthly limit, because processing them costs us money. Practising, reviewing and testing don't, and won't. Charging a child for the act of studying gets the whole thing backwards.</p>
+
+    <h2>What you'll be able to say at the next conference</h2>
+    <p>Not "I think he's struggling." Instead: <em>"He understands the material. His notes are missing the worked examples, every time. Can he get a copy of those?"</em></p>
+    <p>That is a completely different conversation, and teachers can act on it.</p>
+
+    <h2>Built for families, and careful with your child</h2>
+    <ul>
+      <li>A parent or teacher holds the account. Children study on it and never enter their own details.</li>
+      <li>Photographs are processed and discarded. We don't store them.</li>
+      <li>No advertising, no trackers, no profiling, nothing sold. Ever.</li>
+      <li>Pages that aren't schoolwork are refused outright.</li>
+    </ul>
+    <p>Our <a href="/claripage-privacy">privacy policy</a> sets out exactly what is collected and what isn't, in plain language.</p>
 
     <div class="cta">
       <p><strong>ClariPage is in testing and not yet publicly available.</strong></p>
-      <p>Read <a href="/claripage-how-it-works">how it works</a>, or <a href="/claripage-mission">why we built it</a>.</p>
+      <p>See <a href="/claripage-how-it-works">how it works</a>, or <a href="/claripage-mission">why we built it</a>.</p>
     </div>
 
   </main>
 
-  <footer>&copy; 2026 The Wildbrook Company LLC &middot; <a href="/claripage-privacy">Privacy</a> &middot; <a href="/claripage-terms">Terms</a></footer>
+  <footer>&copy; 2026 The Wildbrook Company LLC &middot; <a href="/claripage-privacy">Privacy</a></footer>
 </div>
 
 </body>
 </html>
-

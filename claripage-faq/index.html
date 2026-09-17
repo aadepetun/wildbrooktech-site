@@ -1,1 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ClariPage FAQ — The Wildbrook Company</title>
+<meta name="description" content="Common questions from parents about ClariPage — cheating, accuracy, privacy, cost and age range.">
+<style>
+  :root{
+    --ink:#16202B; --body:#3C4956; --muted:#6E7C89;
+    --rule:#DDE4EA; --paper:#FFFFFF; --wash:#F4F7F9;
+    --signal:#0B6E8C; --leaf:#2C5F3F; --clay:#C1654A;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0; background:var(--paper); color:var(--body);
+    font-family:"IBM Plex Sans","Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:17px; line-height:1.68; -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:720px; margin:0 auto; padding:0 28px}
+  a{color:var(--signal)}
+  a:focus-visible{outline:2px solid var(--signal); outline-offset:3px; border-radius:2px}
+
+  header{padding:34px 0 0; font-size:15px}
+  header a{color:var(--muted); text-decoration:none}
+  header a:hover{color:var(--signal)}
+
+  .title{padding:44px 0 30px; border-bottom:1px solid var(--rule)}
+  .logo{font-size:25px; font-weight:600; color:var(--ink); letter-spacing:-.3px}
+  .logo em{font-style:normal; color:var(--clay)}
+  .tagline{margin-top:5px; font-size:12px; letter-spacing:2.4px; color:var(--muted)}
+  h1{margin:26px 0 14px; color:var(--ink); font-size:33px; font-weight:600;
+     letter-spacing:-.5px; line-height:1.22}
+  .dates{margin:0; font-size:15px; color:var(--muted)}
+  .lede{margin:0; font-size:19px; color:var(--body); max-width:60ch}
+
+  nav.pages{margin-top:22px; display:flex; flex-wrap:wrap; gap:18px; font-size:15px}
+  nav.pages a{color:var(--muted); text-decoration:none}
+  nav.pages a:hover{color:var(--signal)}
+  nav.pages a.on{color:var(--ink); font-weight:600}
+
+  main{padding:34px 0 0}
+  h2{margin:42px 0 14px; color:var(--ink); font-size:21px; font-weight:600; letter-spacing:-.2px}
+  h3{margin:28px 0 10px; color:var(--ink); font-size:17.5px; font-weight:600}
+  p{margin:0 0 15px}
+  p strong{color:var(--ink)}
+  ul{margin:0 0 16px; padding-left:22px}
+  li{margin-bottom:8px}
+
+  table{border-collapse:collapse; width:100%; margin:20px 0 18px; font-size:15.5px}
+  th,td{text-align:left; padding:11px 14px; border-bottom:1px solid var(--rule); vertical-align:top}
+  th{background:var(--wash); color:var(--ink); font-weight:600; border-bottom:1px solid #CFD9E1}
+
+  .note{
+    margin:22px 0; padding:18px 22px; background:#EDF3EF;
+    border-left:3px solid var(--leaf); border-radius:0 4px 4px 0;
+  }
+  .note p:last-child{margin-bottom:0}
+
+  .steps{margin:0; padding:0; list-style:none; counter-reset:step}
+  .steps > li{
+    position:relative; margin:0 0 34px; padding-left:52px; counter-increment:step;
+  }
+  .steps > li::before{
+    content:counter(step); position:absolute; left:0; top:1px;
+    width:32px; height:32px; border-radius:100px; background:var(--wash);
+    color:var(--ink); font-weight:600; font-size:15px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .steps h2{margin:0 0 10px; font-size:19px}
+  .steps p:last-child{margin-bottom:0}
+
+  .badges{border-collapse:collapse; width:100%; margin:18px 0}
+  .badges td{border-bottom:1px solid var(--rule); padding:12px 14px 12px 0; vertical-align:top}
+  .badges td:first-child{width:180px; white-space:nowrap}
+  .chip{
+    display:inline-block; padding:3px 10px; border-radius:100px;
+    font-size:12.5px; font-weight:600; letter-spacing:.2px;
+  }
+  .chip.n{background:#EDF3EF; color:var(--leaf)}
+  .chip.p{background:var(--wash); color:var(--muted)}
+  .chip.a{background:#FBF1D8; color:#8A6B12}
+  .chip.f{background:#FBE7E0; color:var(--clay)}
+  .chip.k{background:#E6EFF5; color:var(--signal)}
+
+  .cta{margin:40px 0 0; padding:22px 24px; background:var(--wash); border-radius:6px}
+  .cta p:last-child{margin-bottom:0}
+
+  .faq h3{
+    margin:32px 0 8px; color:var(--ink); font-size:18px; font-weight:600;
+    letter-spacing:-.1px; line-height:1.4;
+  }
+  .faq h3:first-of-type{margin-top:10px}
+  .faq p{margin:0 0 13px}
+  .faq > section{padding-bottom:6px}
+  .faq > section + section{margin-top:44px; padding-top:34px; border-top:1px solid var(--rule)}
+  .faq h2{margin:0 0 4px}
+  .faq .kicker{font-size:13px; letter-spacing:1.6px; text-transform:uppercase;
+               color:var(--muted); margin:0 0 18px}
+
+  address{font-style:normal; line-height:1.7}
+  footer{margin-top:50px; padding:26px 0 60px; border-top:1px solid var(--rule);
+         font-size:14px; color:var(--muted)}
+
+  @media (max-width:560px){
+    h1{font-size:27px}
+    .badges td:first-child{width:auto; display:block; padding-bottom:4px}
+    .badges td{display:block; border:0; padding:2px 0}
+    .badges tr{display:block; border-bottom:1px solid var(--rule); padding:12px 0}
+    table:not(.badges),table:not(.badges) tbody,table:not(.badges) tr{display:block}
+    table:not(.badges) thead{display:none}
+    table:not(.badges) tr{border-bottom:1px solid var(--rule); padding:12px 0}
+    table:not(.badges) th,table:not(.badges) td{border:0; padding:2px 0; display:block}
+    table:not(.badges) td:first-child{font-weight:600; color:var(--ink)}
+  }
+</style>
+</head>
+<body>
+
+<header class="wrap"><a href="/">&larr; The Wildbrook Company</a></header>
+
+<div class="wrap">
+  <div class="title">
+    <div class="logo">Clari<em>Page</em></div>
+    <div class="tagline">EVIDENCE FIRST</div>
+    <h1>Questions parents ask</h1>
+    <p class="lede">Including the awkward ones. If yours isn't here, email us and we'll answer it.</p>
+    <nav class="pages"><a href="/claripage">Overview</a><a href="/claripage-how-it-works">How it works</a><a href="/claripage-mission">Why we built it</a><a href="/claripage-faq" class='on'>FAQ</a><a href="/claripage-privacy">Privacy</a><a href="/claripage-terms">Terms</a></nav>
+  </div>
+
+  <main>
+
+    <div class="faq">
+
+    <section>
+      <h2>Is this cheating?</h2>
+      <p class="kicker">The question most parents ask first</p>
+
+      <h3>Will ClariPage do my child's homework?</h3>
+      <p>No, and it's built to refuse. ClariPage works on notes and handouts &mdash; it organizes what was taught and names what's missing. Point it at a worksheet expecting answers and you'll be disappointed, which is the intended outcome.</p>
+
+      <h3>So what's the difference between this and a chatbot?</h3>
+      <p>A chatbot hands your child a wall of confident text with no way to tell what came from the teacher and what the machine invented. ClariPage labels every single point with its origin. You can always see what was added, and so can your child.</p>
+
+      <h3>Will my child's teacher have a problem with it?</h3>
+      <p>We'd encourage you to show them. ClariPage doesn't produce work to hand in &mdash; it produces revision material from the teacher's own lesson, and it flags what your child failed to write down. Most teachers we've spoken to are more interested in that second part than the first.</p>
+
+      <h3>Won't my child stop taking notes if an app will fix them?</h3>
+      <p>It's a fair worry, and it's why every set of notes ends by naming what was missed. We're trying to produce a child who takes better notes next term, not one who stops bothering. If ClariPage ever makes note-taking feel pointless, we've built it wrong.</p>
+    </section>
+
+    <section>
+      <h2>Will it actually work for us?</h2>
+      <p class="kicker">Before you spend an evening on it</p>
+
+      <h3>What ages is it for?</h3>
+      <p>Roughly six to fourteen is where it does the most good &mdash; the years when note-taking is still being learned rather than assumed. It works for older students too, and you can set the reading level to match, but the sweet spot is primary and middle school.</p>
+
+      <h3>My child's handwriting is genuinely terrible. Will it cope?</h3>
+      <p>Usually, yes. It's designed for real children's handwriting rather than neat samples. More importantly, it tells you when it struggled: every set carries a read-confidence rating, so a page it found hard is marked as such rather than quietly guessed at.</p>
+
+      <h3>What subjects does it handle?</h3>
+      <p>Anything taught from notes or a handout. It's strongest on the subjects with structure &mdash; maths, science, geography, history &mdash; and works fine on vocabulary and definitions in any subject. Pages that are mostly long prose produce fewer useful flashcards, simply because there's less to test.</p>
+
+      <h3>What if the notes are a typed handout rather than handwriting?</h3>
+      <p>That's common in primary school and fully supported. Those points get their own label, "from the handout", so you can still tell what your child wrote from what the teacher gave them.</p>
+
+      <h3>What if it gets something wrong?</h3>
+      <p>It sometimes will. It reads handwriting well and still misreads occasionally, and a diagram is very occasionally wrong. That's precisely why the confidence rating and the labels exist. A child who checks is better off than a child who trusts, and we'd rather build the first kind of habit.</p>
+
+      <h3>Does it replace a tutor?</h3>
+      <p>No. A tutor teaches. ClariPage tells you what to teach, or what to ask the teacher for. If anything it makes a tutor's hour more useful, because you arrive knowing which concept actually went missing.</p>
+    </section>
+
+    <section>
+      <h2>How it works in practice</h2>
+      <p class="kicker">The everyday details</p>
+
+      <h3>Do I have to type anything in?</h3>
+      <p>No. That's rather the point. You photograph the page and everything else &mdash; notes, diagrams, flashcards, test questions &mdash; is produced from it. If you've built a flashcard set by hand at ten at night, this is the part that gives you the evening back.</p>
+
+      <h3>How long does it take?</h3>
+      <p>About a minute for a few pages. You don't have to wait on the screen; it keeps working if you go and do something else, and tells you when it's ready.</p>
+
+      <h3>Can my child use it on their own?</h3>
+      <p>That's the aim, particularly for younger children. Notes are written at their reading level and everything can be read aloud, so a seven-year-old can work through a round of flashcards without an adult sitting beside them.</p>
+
+      <h3>Can I use one account for two children?</h3>
+      <p>You can, and study sets are shared across the account. There are no separate per-child profiles yet, so two children's material sits in one library. If you'd rather keep them apart, use one account each. Per-child profiles are on our list.</p>
+
+      <h3>Does it work without a signal?</h3>
+      <p>Studying does. Flashcards, practice and the review queue all work offline, because everything is stored on the device. Photographing new pages needs a connection, since that's the part our servers do.</p>
+
+      <h3>What devices does it run on?</h3>
+      <p>iPhone and iPad during testing. Android is not built yet.</p>
+
+      <h3>Is there a limit on how much we can use it?</h3>
+      <p>Photographing pages has a monthly limit, because processing an image costs us money. Studying has none and never will &mdash; flashcards, practice, tests and the review queue are unlimited. Charging a child for the act of studying gets the whole thing backwards.</p>
+
+      <h3>What does it cost?</h3>
+      <p>Nothing during testing. We haven't set pricing yet. Whatever we land on, the free capture allowance will be enough to be genuinely useful, and studying will stay unlimited.</p>
+    </section>
+
+    <section>
+      <h2>Privacy and safety</h2>
+      <p class="kicker">What happens to your child's work</p>
+
+      <h3>Do you keep the photographs?</h3>
+      <p>No. Images are sent for processing and discarded once the notes come back. They are not stored in any database or file store of ours.</p>
+
+      <h3>Does my child need their own account?</h3>
+      <p>No, and they can't have one. A parent, guardian or teacher holds the account. Children study on it and never enter their own details. That was a design decision before it was a legal one.</p>
+
+      <h3>Is my child's work used to train AI models?</h3>
+      <p>No. We do not enable any option that would allow it, and we don't sell, rent or share your information for marketing.</p>
+
+      <h3>Are there ads or tracking?</h3>
+      <p>None. No advertising, no analytics trackers, no profiling, nothing sold. There is no advertising identifier in the app.</p>
+
+      <h3>What if someone photographs something that isn't schoolwork?</h3>
+      <p>It's refused. Pages that aren't study material are declined, and nothing is read, transcribed or generated from them. That check runs before anything else happens.</p>
+
+      <h3>Can I delete everything?</h3>
+      <p>Yes. Delete an individual set of notes in the app, or email us to delete the account and everything in it. Our <a href="/claripage-privacy">privacy policy</a> sets out exactly what's kept, for how long, and how to get rid of it.</p>
+    </section>
+
+    </div>
+
+    <div class="cta">
+      <p><strong>Didn't answer your question?</strong></p>
+      <p>Email <a href="mailto:contact@wildbrooktech.com">contact@wildbrooktech.com</a> and we'll answer it &mdash; and probably add it here.</p>
+    </div>
+
+  </main>
+
+  <footer>&copy; 2026 The Wildbrook Company LLC &middot; <a href="/claripage-privacy">Privacy</a></footer>
+</div>
+
+</body>
+</html>
 

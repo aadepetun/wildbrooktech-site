@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>How ClariPage works — The Wildbrook Company</title>
-<meta name="description" content="What happens between photographing a page and studying from it.">
+<meta name="description" content="What happens between photographing a page and studying from it, and the learning science behind it.">
 <style>
   :root{
     --ink:#16202B; --body:#3C4956; --muted:#6E7C89;
@@ -99,6 +99,22 @@
   .faq .kicker{font-size:13px; letter-spacing:1.6px; text-transform:uppercase;
                color:var(--muted); margin:0 0 18px}
 
+  figure{margin:26px 0 30px; text-align:center}
+  figure img{
+    width:100%; max-width:300px; height:auto; display:block; margin:0 auto;
+    border:1px solid var(--rule); border-radius:14px;
+    box-shadow:0 2px 14px rgba(22,32,43,.08);
+  }
+  figcaption{margin-top:12px; font-size:14.5px; color:var(--muted); max-width:44ch;
+             margin-left:auto; margin-right:auto; line-height:1.55}
+  .shots{display:flex; gap:20px; justify-content:center; flex-wrap:wrap; margin:26px 0 30px}
+  .shots figure{margin:0; flex:0 1 260px}
+  .shots figure img{max-width:260px}
+  .shots figcaption{font-size:13.5px; max-width:30ch}
+  .steps figure{margin:18px 0 6px; text-align:left}
+  .steps figure img{margin:0}
+  .steps figcaption{margin-left:0; text-align:left; max-width:40ch}
+
   address{font-style:normal; line-height:1.7}
   footer{margin-top:50px; padding:26px 0 60px; border-top:1px solid var(--rule);
          font-size:14px; color:var(--muted)}
@@ -124,64 +140,104 @@
   <div class="title">
     <div class="logo">Clari<em>Page</em></div>
     <div class="tagline">EVIDENCE FIRST</div>
-    <h1>How it works</h1>
-    <p class="lede">A page of notes goes in. Study material you can trust comes out, and you learn something about how your child is doing.</p>
-    <nav class="pages"><a href="/claripage">Overview</a><a href="/claripage-how-it-works" class='on'>How it works</a><a href="/claripage-mission">Why we built it</a><a href="/claripage-faq">FAQ</a><a href="/claripage-privacy">Privacy</a><a href="/claripage-terms">Terms</a></nav>
+    <h1>How ClariPage works</h1>
+    <p class="lede">From a photo of a page to flashcards, diagrams and recall practice, and why each piece is built the way it is.</p>
+    <nav class="pages"><a href="/claripage">Overview</a><a href="/claripage-how-it-works" class='on'>How it works</a><a href="/claripage-mission">Our mission</a><a href="/claripage-faq">FAQ</a><a href="/claripage-privacy">Privacy</a><a href="/claripage-terms">Terms</a></nav>
   </div>
 
   <main>
 
-    <p>A page of notes goes in. Study material you can trust comes out, in about a minute. Here's what happens, and what you see at each stage.</p>
+    <p>Photograph a page. Get back study material in about a minute. Here is what happens in between, and why each part is built the way it is.</p>
 
     <ol class="steps">
       <li>
-        <h2>You photograph the pages</h2>
-        <p>The camera stays open between shots, so a whole topic goes in one pass instead of one page at a time. Up to twelve pages. Handwriting or a printed handout both work.</p>
-        <p>You set the reading level once &mdash; elementary, middle or high &mdash; and it's remembered. Nothing to type in, no terms to enter by hand. If you've ever built a Quizlet set manually at ten at night, this is the part that gives you the evening back.</p>
+        <h2>Photograph the pages</h2>
+        <p>The camera stays open between shots, so a whole topic goes in at once. Up to twelve pages. Handwriting or a printed handout both work.</p>
+        <p>You pick the reading level once and it is remembered. There is nothing to type in. No terms to enter by hand.</p>
+    <figure>
+      <img src="/claripage-images/capture.jpg" alt="The ClariPage capture screen with reading level options" loading="lazy">
+      <figcaption>Pick the reading level once. Everything that follows is written to match it.</figcaption>
+    </figure>
       </li>
       <li>
-        <h2>It reads what's actually there</h2>
-        <p>Spelling is corrected, abbreviations expanded, blank pages ignored. Long topics are read in pieces and joined up, so nothing gets cut off.</p>
-        <p><strong>You get a read-confidence rating.</strong> Bad handwriting and bad lighting are real. When a page was hard to read, you're told, rather than quietly handed a guess.</p>
+        <h2>It reads what is actually there</h2>
+        <p>Spelling gets fixed, abbreviations get expanded, blank pages get skipped. Long topics are read in pieces and joined back together.</p>
+        <p>You also get a read confidence rating. Bad handwriting and bad lighting are real. When a page was hard to read, you are told.</p>
       </li>
       <li>
-        <h2>Every point is labelled by where it came from</h2>
-        <p>Your child's handwriting, a printed handout, an addition, a correction, or your own reference material. Five labels, always visible, never blended together.</p>
-        <p><strong>What this gives you:</strong> a way to separate your child's work from the machine's without reading a word of it. Glance at the colours and you know how much of the lesson was captured.</p>
+        <h2>Every point gets labeled</h2>
+        <p>Your child's handwriting, a printed handout, an addition, a correction, or your own reference material. Five labels, always visible.</p>
+        <p>Nothing gets blended together. You can separate your child's work from the machine's without reading a word of it.</p>
+    <figure>
+      <img src="/claripage-images/notes.jpg" alt="ClariPage notes showing labels and an explanatory diagram" loading="lazy">
+      <figcaption>The same page, organized. Labels on the right, a diagram where one helps.</figcaption>
+    </figure>
       </li>
       <li>
         <h2>It names what was missed</h2>
-        <p>Each set ends with a short, plain summary. Not a scolding. Something like: this page covered the definitions well and skipped the worked examples.</p>
-        <p><strong>What this gives you:</strong> over a term, a pattern. "He never writes down the examples" is a fixable habit. "He's not trying" is an argument.</p>
+        <p>Every set ends with a short summary of what the page left out. Not a scolding. Something like: this page covered the definitions well and skipped the worked examples.</p>
+        <p>Over a semester, that becomes a pattern you can act on.</p>
+    <figure>
+      <img src="/claripage-images/gaps.jpg" alt="The what was missing summary in ClariPage" loading="lazy">
+      <figcaption>What was missing, in plain language, at the end of every set.</figcaption>
+    </figure>
       </li>
       <li>
-        <h2>Diagrams, but only where one helps</h2>
-        <p>Where a figure genuinely explains something &mdash; a process, a comparison, an equation with its parts named &mdash; ClariPage draws one. Where it wouldn't help, it doesn't. A list of definitions doesn't need a picture, and a cluttered page is harder to study from.</p>
-        <p>Diagrams follow the reading level too: bold and simple for a seven-year-old, detailed for a fourteen-year-old.</p>
+        <h2>Diagrams, where a diagram helps</h2>
+        <p>A labeled process, a comparison, an equation with its parts named. Where a figure would not help, it does not draw one. A list of definitions does not need a picture.</p>
+        <p>Diagrams follow the reading level too. Bold and simple for a second grader, detailed for a junior.</p>
       </li>
       <li>
-        <h2>Your child studies, in whichever way works for them</h2>
-        <p><strong>Flashcards</strong> with read-aloud, so a younger child can do a round alone.</p>
-        <p><strong>Learn</strong> &mdash; starts as multiple choice, then makes them type the answer from memory once they've got it. Typed answers are marked generously; spelling doesn't count, the idea does.</p>
-        <p><strong>Match</strong> &mdash; a timed pairing game. Two minutes in the car.</p>
-        <p><strong>Practice test</strong> &mdash; ten questions, scored instantly, with the results split by label.</p>
-        <p><strong>Review queue</strong> &mdash; everything due today across every subject, twenty at a time, timed so cards return just before they'd be forgotten.</p>
-      </li>
-      <li>
-        <h2>You see which problem you're dealing with</h2>
-        <p>The practice test reports two scores: material your child wrote down, and material their notes had missed.</p>
-        <p><strong>What this gives you:</strong> the difference between "study harder" and "write down the examples". One of those is advice. The other is a plan.</p>
+        <h2>Your child studies</h2>
+        <p><strong>Flashcards</strong> with read aloud.</p>
+        <p><strong>Learn</strong> starts with multiple choice and moves to typing answers from memory.</p>
+        <p><strong>Match</strong> is a timed pairing game. Two minutes in the car.</p>
+        <p><strong>Practice test</strong> is ten questions, scored instantly, split by label.</p>
+        <p><strong>Review</strong> brings back everything due today, twenty cards at a time.</p>
+    <div class="shots">
+      <figure>
+        <img src="/claripage-images/flashcard.jpg" alt="A ClariPage flashcard" loading="lazy">
+        <figcaption>Flashcards, read aloud on request.</figcaption>
+      </figure>
+      <figure>
+        <img src="/claripage-images/match.jpg" alt="The ClariPage matching game" loading="lazy">
+        <figcaption>Match, against the clock.</figcaption>
+      </figure>
+    </div>
       </li>
     </ol>
 
-    <h2>What it deliberately won't do</h2>
-    <p><strong>It won't do the homework.</strong> It organizes what was taught and names what's missing. It won't answer the worksheet.</p>
-    <p><strong>It won't hide the machine's work.</strong> Every added line is labelled, always.</p>
-    <p><strong>It won't work on anything but schoolwork.</strong> Other pages are refused, and nothing is read or generated from them.</p>
-    <p><strong>It won't pretend to be perfect.</strong> Handwriting gets misread. A diagram is occasionally wrong. That's exactly why the confidence rating and the labels exist &mdash; so your child checks rather than assumes, which is a better habit anyway.</p>
+    <h2>Why it is built this way</h2>
+    <p>The study tools are not arbitrary. Each one is built around something researchers have known about learning for a long time.</p>
+
+    <h3>Retrieval practice</h3>
+    <p>Pulling a fact out of memory strengthens it far more than reading it again. This is why rereading notes feels productive and mostly is not. Recognition is not the same as recall.</p>
+    <p>Every study mode in ClariPage asks your child to produce the answer before they see it. Flashcards, Learn, Match and the practice test are all retrieval in different disguises.</p>
+
+    <h3>Spacing</h3>
+    <p>Reviewing something once, then again a few days later, then a week after that, beats the same total time spent in one sitting. Forgetting a little between sessions is part of what makes it work.</p>
+    <p>The review queue schedules each card for the moment just before your child would forget it. Cards they find easy come back rarely. Cards they miss come back soon.</p>
+
+    <h3>Fading the help</h3>
+    <p>Learning goes best when support is high at the start and drops away as the learner gets stronger.</p>
+    <p>Learn does this on purpose. A card starts as multiple choice, where recognizing the answer is enough. Once your child gets it right consistently, the same card switches to typing the answer from memory, with no options to choose from.</p>
+
+    <h3>Worked examples</h3>
+    <p>For anything procedural, seeing a complete example worked through is more useful than practicing blind. It is also the thing students most often fail to copy down, because the teacher moves faster than a pencil.</p>
+    <p>That is why the gap summary calls it out specifically when the examples are what went missing.</p>
+
+    <h3>Knowing what you do not know</h3>
+    <p>Students are famously bad at judging what they have learned. Material that feels familiar gets skipped, and the gaps stay invisible until the test.</p>
+    <p>The labels and the two score breakdown exist for this reason. They turn a vague feeling of "I studied" into something specific: this part you had, this part was never on your page.</p>
+
+    <h2>What it will not do</h2>
+    <p><strong>It will not do the homework.</strong> It organizes what was taught and names what is missing. It will not answer the worksheet.</p>
+    <p><strong>It will not hide what it added.</strong> Every added line is labeled, always.</p>
+    <p><strong>It will not work on anything but schoolwork.</strong> Other pages are refused, and nothing is read or generated from them.</p>
+    <p><strong>It will not pretend to be perfect.</strong> Handwriting gets misread sometimes. A diagram is occasionally wrong. That is why the confidence rating and the labels are there, and why checking is a better habit than trusting.</p>
 
     <div class="cta">
-      <p>Read <a href="/claripage-mission">why we built it</a>, or see the <a href="/claripage">overview</a>.</p>
+      <p>Read the <a href="/claripage-faq">FAQ</a>, or see <a href="/claripage-mission">why we built it</a>.</p>
     </div>
 
   </main>

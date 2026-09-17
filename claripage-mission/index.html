@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Why we built ClariPage — The Wildbrook Company</title>
-<meta name="description" content="Why a study tool should show where every point came from.">
+<meta name="description" content="Why we built a study app that shows its working.">
 <style>
   :root{
     --ink:#16202B; --body:#3C4956; --muted:#6E7C89;
@@ -87,6 +87,18 @@
   .cta{margin:40px 0 0; padding:22px 24px; background:var(--wash); border-radius:6px}
   .cta p:last-child{margin-bottom:0}
 
+  .faq h3{
+    margin:32px 0 8px; color:var(--ink); font-size:18px; font-weight:600;
+    letter-spacing:-.1px; line-height:1.4;
+  }
+  .faq h3:first-of-type{margin-top:10px}
+  .faq p{margin:0 0 13px}
+  .faq > section{padding-bottom:6px}
+  .faq > section + section{margin-top:44px; padding-top:34px; border-top:1px solid var(--rule)}
+  .faq h2{margin:0 0 4px}
+  .faq .kicker{font-size:13px; letter-spacing:1.6px; text-transform:uppercase;
+               color:var(--muted); margin:0 0 18px}
+
   address{font-style:normal; line-height:1.7}
   footer{margin-top:50px; padding:26px 0 60px; border-top:1px solid var(--rule);
          font-size:14px; color:var(--muted)}
@@ -113,44 +125,56 @@
     <div class="logo">Clari<em>Page</em></div>
     <div class="tagline">EVIDENCE FIRST</div>
     <h1>Why we built it</h1>
-    <p class="lede">Most study apps assume the notes are already good. They usually aren't.</p>
-    <nav class="pages"><a href="/claripage">Overview</a><a href="/claripage-how-it-works">How it works</a><a href="/claripage-mission" class='on'>Why we built it</a><a href="/claripage-privacy">Privacy</a><a href="/claripage-terms">Terms</a></nav>
+    <p class="lede">Our child was studying hard and doing badly. It took us far too long to work out why.</p>
+    <nav class="pages"><a href="/claripage">Overview</a><a href="/claripage-how-it-works">How it works</a><a href="/claripage-mission" class='on'>Why we built it</a><a href="/claripage-faq">FAQ</a><a href="/claripage-privacy">Privacy</a><a href="/claripage-terms">Terms</a></nav>
   </div>
 
   <main>
 
-    <h2>The problem isn't studying. It's what's on the page.</h2>
-    <p>Most study apps assume the notes are already good. They take what a student wrote down and turn it into flashcards, quizzes, summaries.</p>
-    <p>But the notes usually aren't good. A child writes fast, misses half of what the teacher said, copies a formula wrong, abbreviates something they won't recognise in a week. Then they revise from that page as though it were complete. They study hard, do badly, and nobody can explain why.</p>
-    <p>A tool that polishes incomplete notes just produces confident, well-formatted gaps.</p>
+    <p>ClariPage started at a kitchen table, with a pile of science notes that were missing more than they contained.</p>
 
-    <h2>So we show the seams</h2>
-    <p>ClariPage fills in what a page is missing. That part isn't unusual &mdash; plenty of tools will happily generate more.</p>
-    <p>What's unusual is that every point carries a label saying where it came from: what the student wrote, what came off a handout, what was added because the notes left it out, what was corrected because the page had it wrong.</p>
+    <h2>The problem wasn't studying</h2>
+    <p>Our child was working. Sitting down, going over it, doing the thing we asked. And still coming home with marks that didn't match the effort.</p>
+    <p>When we finally looked properly at what he was revising from, the answer was obvious and slightly heartbreaking. He was studying a page that was missing a third of the lesson. He'd been revising his own gaps, faithfully, for weeks.</p>
+    <p>No amount of trying harder fixes that.</p>
 
-    <h2>Why a label matters more than it sounds</h2>
-    <p><strong>A student can trust it.</strong> When an app hands you a page of confident text, you have no way to know which parts to believe. A labelled page tells you what rests on your teacher's words and what doesn't.</p>
-    <p><strong>A parent can check it.</strong> You can see how much your child captured and how much had to be supplied. That's a real answer to "how is school going", and not one a grade gives you.</p>
-    <p><strong>A teacher isn't undermined.</strong> What was taught stays visibly distinct from what a model added.</p>
-    <p><strong>And it turns a weakness into information.</strong> The practice test reports two scores. A child who does well on their own notes and badly on added material has a note-taking problem, not a studying problem. That's fixable, and invisible on a report card.</p>
+    <h2>Why existing tools didn't help</h2>
+    <p>Flashcard apps assume the notes are already good, and make a parent type every term in by hand. Homework-answer apps give a child the answer and teach them nothing. General AI assistants will produce a confident page of text with no way to tell which parts came from the teacher and which the machine invented.</p>
+    <p>All three share an assumption: that the page in front of the child is complete. In primary and middle school, it almost never is. Taking notes is a skill children are still learning, and we grade them as though they've already learned it.</p>
+
+    <h2>So we built the thing that shows the gaps</h2>
+    <p>ClariPage fills in what a page is missing. Plenty of tools will do that much.</p>
+    <p>What's different is that it labels every point with where it came from. What your child wrote. What came off a handout. What had to be added. What was wrong and got corrected.</p>
+    <p>Keeping those separate is the whole product. It's also the harder engineering choice, and we'd make it again.</p>
+
+    <h2>What that gives a parent</h2>
+    <p><strong>You can see the gap without understanding the subject.</strong> You don't need to remember how to factor a quadratic. You need to see that half the page is labelled "added".</p>
+    <p><strong>You find out in October, not at the report card.</strong> A missed concept is cheap to fix in the week it happens and expensive to fix a term later.</p>
+    <p><strong>You can tell effort apart from understanding.</strong> The practice test gives two scores. A child strong on their own notes and weak on the additions doesn't need to work harder. They need to write more down.</p>
+    <p><strong>You can see what the AI said.</strong> Not a wall of confident text. A labelled page you can check.</p>
 
     <h2>What we believe</h2>
-    <p><strong>Evidence first.</strong> A study tool should make its sources visible. If we can't show where something came from, we shouldn't be asking a child to memorise it.</p>
-    <p><strong>Better notes, not fewer notes.</strong> The goal is a student who takes better notes next term, not one who stops taking them because an app will do it. So we name what they missed, every time.</p>
-    <p><strong>Studying should never be rationed.</strong> Capturing a page costs us money and is limited. Reviewing, practising and testing cost almost nothing and are not. Charging students for the act of studying gets it backwards.</p>
-    <p><strong>Write for the child in front of you.</strong> Notes for a seven-year-old shouldn't read like notes for a sixteen-year-old. Pick the reading level and everything follows it &mdash; the notes, the flashcards, the questions, even how busy the diagrams are.</p>
-    <p><strong>The adult holds the account.</strong> Children study on a parent's or teacher's login. They don't hand over their details, and the adult can see and delete everything. That was a design decision before it was a legal one.</p>
-    <p><strong>Say what it can't do.</strong> ClariPage reads handwriting well and still sometimes misreads it. It draws diagrams that teach and occasionally draws one that's wrong. We'd rather a student check a diagram than trust it blindly.</p>
+    <p><strong>Evidence first.</strong> A study tool should show its sources. If we can't tell you where something came from, we shouldn't be asking your child to memorise it.</p>
+    <p><strong>Better notes, not fewer notes.</strong> The goal is a child who takes better notes next term, not one who stops bothering because an app will cover for them. So we name what was missed, every single time. The note-taking habit is worth more in the long run than any set of flashcards.</p>
+    <p><strong>Studying should never be rationed.</strong> Capturing a page costs us money and is limited. Practising, reviewing and testing aren't, and won't be. An app that charges a child to keep studying has its incentives pointed the wrong way.</p>
+    <p><strong>Write for the child in front of you.</strong> A page for a seven-year-old shouldn't read like a page for a sixteen-year-old. Choose the reading level and everything follows it: the notes, the questions, even how busy the diagrams are.</p>
+    <p><strong>The adult holds the account.</strong> Children study on a parent's or teacher's login and never hand over their own details. That was a design decision before it was a legal one.</p>
+    <p><strong>It should refuse things.</strong> It won't answer the worksheet. It won't work on anything that isn't schoolwork. A tool used by children should have things it declines to do.</p>
+    <p><strong>Say plainly what it can't do.</strong> ClariPage reads handwriting well and still sometimes gets it wrong. It draws diagrams that teach and occasionally draws one that's off. We show a confidence rating and label every addition, because a child who checks is better off than a child who trusts.</p>
 
     <h2>Who it's for</h2>
-    <p>Families, mostly. A parent who wants to help with revision and hasn't time to rewrite a notebook. A student whose own messy pages should be usable. A teacher turning a handout into practice without losing track of what came from where.</p>
-    <p>It started at one kitchen table, with a pile of science notes that were missing more than they contained.</p>
+    <p>Parents of children roughly six to fourteen, mostly. The years where note-taking is being learned rather than assumed, where a parent can still help but is starting to lose track of the material, and where a small gap left alone becomes a large one.</p>
+    <p>Also teachers turning a handout into practice, and older students whose own notes need rescuing.</p>
+
+    <div class="cta">
+      <p><strong>ClariPage is in testing and not yet publicly available.</strong></p>
+      <p>See the <a href="/claripage">overview</a>, or <a href="/claripage-how-it-works">how it works</a>.</p>
+    </div>
 
   </main>
 
-  <footer>&copy; 2026 The Wildbrook Company LLC &middot; <a href="/claripage-privacy">Privacy</a> &middot; <a href="/claripage-terms">Terms</a></footer>
+  <footer>&copy; 2026 The Wildbrook Company LLC &middot; <a href="/claripage-privacy">Privacy</a></footer>
 </div>
 
 </body>
 </html>
-

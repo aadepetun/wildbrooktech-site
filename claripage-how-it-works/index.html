@@ -103,6 +103,12 @@
     table:not(.badges) th,table:not(.badges) td{border:0; padding:2px 0; display:block}
     table:not(.badges) td:first-child{font-weight:600; color:var(--ink)}
   }
+
+  figure.shot{margin:26px 0; text-align:center}
+  figure.shot img{max-width:280px; width:100%; border:1px solid var(--rule); border-radius:14px; box-shadow:0 2px 10px rgba(20,38,28,0.08); display:inline-block}
+  figure.shot figcaption{margin-top:10px; font-size:14px; color:var(--muted); max-width:320px; margin-left:auto; margin-right:auto}
+  .shot-row{display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin:26px 0}
+  .shot-row figure.shot{margin:0}
 </style>
 </head>
 <body>
@@ -124,7 +130,8 @@
       <li>
         <h2>Photograph the pages</h2>
         <p>The camera stays open between shots, so a whole topic goes in one pass rather than one page at a time. Up to twelve pages in a set. Handwriting or a printed handout both work, and ClariPage can tell the difference.</p>
-        <p>Set the reading level once &mdash; elementary, middle or high &mdash; and it's remembered. Naming the class and topic is optional and sharpens what gets added later.</p>
+        <p>Set the reading level once (elementary, middle or high) and it's remembered. Naming the class and topic is optional and sharpens what gets added later.</p>
+      <figure class="shot"><img src="/claripage-images/capture.jpg" alt="The new note screen, camera and library buttons, reading level set to Middle school." loading="lazy"><figcaption>Set the class, topic and reading level once per set.</figcaption></figure>
       </li>
       <li>
         <h2>It reads the pages</h2>
@@ -133,39 +140,42 @@
       </li>
       <li>
         <h2>Every point gets a label</h2>
-        <p>This is the part that makes ClariPage different from a summariser. Each line carries its origin: your child's handwriting, a printed handout, an addition, a correction, or your own reference material.</p>
+        <p>This is the part that makes ClariPage different from a summarizer. Each line carries its origin: your child's handwriting, a printed handout, an addition, a correction, or your own reference material.</p>
         <p>Nothing is merged into anonymous prose. The seams stay visible on purpose.</p>
+      <figure class="shot"><img src="/claripage-images/notes.jpg" alt="A note page with YOUR NOTES and ADDED chips beside each line, and a diagram below." loading="lazy"><figcaption>Every line keeps its label, right down to the diagram.</figcaption></figure>
       </li>
       <li>
         <h2>It names the gaps</h2>
-        <p>At the end of every set is a short, plain summary of what the notes left out. Not a scolding &mdash; just an honest note that the page covered the definitions well and skipped the worked examples.</p>
+        <p>At the end of every set is a short, plain summary of what the notes left out. Not a scolding, just an honest note that the page covered the definitions well and skipped the worked examples.</p>
         <p>Over a term that's the most useful thing in the app. It's the difference between "revise harder" and "you're not writing down the examples".</p>
+      <figure class="shot"><img src="/claripage-images/gaps.jpg" alt="The end-of-set summary describing what the notes covered and what they left out." loading="lazy"><figcaption>A plain paragraph on what the pages missed, not a score.</figcaption></figure>
       </li>
       <li>
         <h2>Diagrams, where they help</h2>
-        <p>Where a section benefits from a figure, ClariPage draws one: a labelled process, a comparison, an equation with its parts named. Where a section wouldn't benefit, it doesn't. A list of definitions doesn't need a picture, and a cluttered page is harder to study from.</p>
+        <p>Where a section benefits from a figure, ClariPage draws one: a labeled process, a comparison, an equation with its parts named. Where a section wouldn't benefit, it doesn't. A list of definitions doesn't need a picture, and a cluttered page is harder to study from.</p>
         <p>Diagrams follow the reading level too. A figure for a seven-year-old is bold and simple; one for a sixteen-year-old can carry real detail.</p>
       </li>
       <li>
         <h2>Then you study, as much as you like</h2>
-        <p><strong>Learn</strong> &mdash; adaptive practice. Cards start as multiple choice and switch to typing the answer from memory once you've got them right. Typed answers are marked generously: spelling and word order don't matter, the idea does.</p>
-        <p><strong>Flashcards</strong> &mdash; tap to flip, grade yourself, hear it read aloud.</p>
-        <p><strong>Match</strong> &mdash; a timed pairing game. Good for two minutes in the car.</p>
-        <p><strong>Practice test</strong> &mdash; ten questions, scored instantly, with results split by label so you can see whether lost marks were on your own notes or on material the notes had missed.</p>
-        <p><strong>Review queue</strong> &mdash; everything due today across every set, scheduled so cards return just before they'd be forgotten. Twenty at a time, because a wall of eighty is how people quit.</p>
+        <p><strong>Learn:</strong> adaptive practice. Cards start as multiple choice and switch to typing the answer from memory once you've got them right. Typed answers are marked generously: spelling and word order don't matter, the idea does.</p>
+        <p><strong>Flashcards:</strong> tap to flip, grade yourself, hear it read aloud.</p>
+        <p><strong>Match:</strong> a timed pairing game. Good for two minutes in the car.</p>
+        <p><strong>Practice test:</strong> ten questions, scored instantly, with results split by label so you can see whether lost marks were on your own notes or on material the notes had missed.</p>
+        <p><strong>Review queue:</strong> everything due today across every set, scheduled so cards return just before they'd be forgotten. Twenty at a time, because a wall of eighty is how people quit.</p>
+      <div class="shot-row"><figure class="shot"><img src="/claripage-images/flashcard.jpg" alt="A flashcard with a read-aloud button." loading="lazy"><figcaption>Flashcards</figcaption></figure><figure class="shot"><img src="/claripage-images/match.jpg" alt="The Match pairing game." loading="lazy"><figcaption>Match</figcaption></figure><figure class="shot"><img src="/claripage-images/test.jpg" alt="The practice test intro screen." loading="lazy"><figcaption>Practice test</figcaption></figure></div>
       </li>
       <li>
         <h2>Your own reference material, optionally</h2>
-        <p>You can add study pages of your own &mdash; a revision guide, formula sheets, pages a teacher shared. ClariPage reads them once and keeps the facts. After that, when a capture touches a topic they cover, it draws on them and labels anything taken from them as <span class="chip k">reference</span>.</p>
+        <p>You can add study pages of your own, such as a revision guide or formula sheets, pages a teacher shared. ClariPage reads them once and keeps the facts. After that, when a capture touches a topic they cover, it draws on them and labels anything taken from them as <span class="chip k">reference</span>.</p>
         <p>We keep the facts extracted from your pages, not the images, and never show one family's material to anyone else.</p>
       </li>
     </ol>
 
     <h2>What ClariPage deliberately doesn't do</h2>
     <p><strong>It doesn't do the homework.</strong> It organizes what was taught and names what's missing. It won't answer the worksheet.</p>
-    <p><strong>It doesn't hide the machine's work.</strong> Every added line is labelled. If you want only what your child wrote, you can see exactly that.</p>
+    <p><strong>It doesn't hide the machine's work.</strong> Every added line is labeled. If you want only what your child wrote, you can see exactly that.</p>
     <p><strong>It only works on schoolwork.</strong> Pages that aren't study material are declined, and nothing is read or generated from them.</p>
-    <p><strong>It doesn't pretend to be perfect.</strong> Handwriting gets misread. A diagram is occasionally wrong. That's why the confidence rating and the labels are there &mdash; so a student can check rather than assume.</p>
+    <p><strong>It doesn't pretend to be perfect.</strong> Handwriting gets misread. A diagram is occasionally wrong. That's why the confidence rating and the labels are there, so a student can check rather than assume.</p>
 
   </main>
 
